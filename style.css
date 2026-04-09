@@ -1,3 +1,12 @@
+/*Cuerpo de la pagina*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/*Barra de navegacion*/
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -11,6 +20,7 @@
     z-index: 1000; /* encima de todo */
 }
 
+/*Link de barra de navegacion*/
 .nav-links {
     display: flex; /* Alinea los <li> horizontalmente */
     list-style: none; /* Quita viñetas */
@@ -18,10 +28,13 @@
     margin: 0;
     }
 
+/*enlaces de barra de navegacion*/
 .nav-links a {
     text-decoration: none;
     color: white;
 }
+
+/*Titulo de la pagina*/
 .title{
   background-image: url('https://img.freepik.com/vector-gratis/vector-diseno-fondo-abstracto_677411-4226.jpg?semt=ais_hybrid&w=740&q=80');
   background-size: cover; /* Ajusta la imagen para cubrir todo */
@@ -37,6 +50,7 @@
 
   
 }
+
 h1, p{
     font-weight: 100; 
 }
@@ -44,7 +58,6 @@ h1, p{
 
 
 /*cuerpo*/
-
 .contenedor-flex {
     display: flex; /* Activa flexbox */
     align-items: center; /* Centra verticalmente los elementos */
@@ -69,19 +82,15 @@ h1, p{
 
 
 /*Estilo pie de pagina*/
-/* Asegurar que el footer se mantenga abajo */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-}
-.content { flex: 1; } /* Contenedor de tu contenido principal */
+.content {
+     flex: 1; 
+    } /* Contenedor de tu contenido principal */
+
 
 /* Estilos profesionales del footer */
 .footer {
     background-color: #191919; /* Color oscuro profesional */
-    color: #ecf0f1;
+    color: white;
     padding: 20px 10px;
     text-align: center;
     font-family: Arial, sans-serif;
@@ -101,20 +110,16 @@ body {
     padding: 0;
     display: flex;
     gap: 15px;
+    
 }
 
-.footer-links a {
-    color: #3498db; /* Color de enlace destacado */
+.footer-links li a {
+    color: white;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.footer-links a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
 
-/* map */
+/* mapas */
 .map-container {
     position: relative;
     overflow: hidden;
@@ -132,11 +137,13 @@ body {
     height: 100%;
 }
 
-img {
+.imagen-lado img {
   max-width: 100%;
   height: auto;
 }
 
+
+/**/
 .contenedor-principal {
     width: 80%; /* O el ancho fijo que desees, por ejemplo 1024px */
     max-width: 1200px; /* Evita que sea muy ancho en pantallas enormes */
@@ -156,3 +163,59 @@ img {
     line-height: 200px; 
     font-size: 150%
 }
+.uno{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.wordnav:hover {
+  background-color: #212121; /* Color de sombra */
+  border-radius: 100px;
+  transition: 0.4s;
+  font-size: 20px;
+  
+}
+
+
+.project:hover {
+  background-color: #212121; /* Color de sombra */
+  border-radius: 100px;
+  transition: 0.4s;
+  font-size: 29px;
+  
+}
+
+/* CSS */
+.slider-container {
+  width: 100%; /* O el ancho deseado */
+  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+}
+
+.slider {
+  display: flex; /* Alinea los li en línea */
+  width: 300%; /* Ancho total: 100% * número de imágenes */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  animation: slide 10s infinite; /* Animación automática */
+}
+
+.slider li {
+  width: 100%; /* Cada imagen ocupa el ancho del contenedor */
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+/* Animación para mover el carrusel */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(-33.33%); }
+  66% { transform: translateX(-66.66%); }
+  100% { transform: translateX(0); }
+}
+
