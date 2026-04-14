@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /*Cuerpo de la pagina*/
 body {
     display: flex;
@@ -16,7 +21,7 @@ body {
     color: white;
     box-shadow: 7px 7px 100px rgba(255, 255, 255, 0.841);
     position: fixed; 
-    width: 98.5%;
+    width: 100%;
     z-index: 1000; /* encima de todo */
 }
 
@@ -87,20 +92,17 @@ h1, p{
     } /* Contenedor de tu contenido principal */
 
 
-/* Estilos profesionales del footer */
 .footer {
-    background-color: #191919; /* Color oscuro profesional */
+    background-color: #191919; 
     color: white;
     padding: 20px 10px;
-    text-align: center;
-    font-family: Arial, sans-serif;
 }
 
 .footer-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Responsivo */
+    flex-wrap: wrap; 
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -137,41 +139,28 @@ h1, p{
     height: 100%;
 }
 
-.imagen-lado img {
-  max-width: 100%;
-  height: auto;
-}
-
 
 /**/
 .contenedor-principal {
-    width: 80%; /* O el ancho fijo que desees, por ejemplo 1024px */
-    max-width: 1200px; /* Evita que sea muy ancho en pantallas enormes */
-    margin: 0 auto; /* Centra horizontalmente */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
 }
 
-/* Estilo de todos los proyectos*/
+/* Estilo de todas las palabras*/
 .project {
-    width: 200px; 
-    height: 200px;
-    border: 1px solid #ccc;
+    width: 100%; 
     background-image: url('https://img.freepik.com/vector-gratis/vector-diseno-fondo-abstracto_677411-4226.jpg?semt=ais_hybrid&w=740&q=80');
     color: white;
-    margin: 10px;
-    display: inline-block; 
     text-align: center;
-    line-height: 200px; 
-    font-size: 150%
+    line-height: 100px; 
+    font-size: 150%;
+    margin-bottom: 10px;
+    border-radius: 10px;
 }
-.uno{
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
 
 .wordnav:hover {
-  background-color: #212121; /* Color de sombra */
+  background-color: #212121; 
   border-radius: 100px;
   transition: 0.4s;
   font-size: 20px;
@@ -180,7 +169,7 @@ h1, p{
 
 
 .project:hover {
-  background-color: #212121; /* Color de sombra */
+  background-color: #212121; 
   border-radius: 100px;
   transition: 0.4s;
   font-size: 29px;
@@ -188,34 +177,16 @@ h1, p{
 }
 
 /* CSS */
-.slider-container {
-  width: 100%; /* O el ancho deseado */
-  overflow: hidden; /* Oculta las imágenes fuera del contenedor */
-}
-
 .slider {
-  display: flex; /* Alinea los li en línea */
-  width: 300%; /* Ancho total: 100% * número de imágenes */
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  animation: slide 10s infinite; /* Animación automática */
-}
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  place-items: center;
+  grid-gap:2%;
 
+}
 .slider li {
-  width: 100%; /* Cada imagen ocupa el ancho del contenedor */
-}
+list-style: none;
 
-.slider img {
-  width: 100%;
-  height: auto;
-}
-
-/* Animación para mover el carrusel */
-@keyframes slide {
-  0% { transform: translateX(0); }
-  33% { transform: translateX(-33.33%); }
-  66% { transform: translateX(-66.66%); }
-  100% { transform: translateX(0); }
 }
 
