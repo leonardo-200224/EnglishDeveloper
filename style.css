@@ -13,8 +13,9 @@ body {
 
 /*Barra de navegacion*/
 .navbar {
-    display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; 
+    display: flex;
     align-items: center; /* Centra verticalmente */
     padding: 1rem;
     background-color: #000000;
@@ -23,6 +24,7 @@ body {
     position: fixed; 
     width: 100%;
     z-index: 1000; /* encima de todo */
+
 }
 
 /*Link de barra de navegacion*/
@@ -31,12 +33,14 @@ body {
     list-style: none; /* Quita viñetas */
     gap: 1.5rem; /* Espaciado moderno entre enlaces */
     margin: 0;
+    
     }
 
 /*enlaces de barra de navegacion*/
 .nav-links a {
     text-decoration: none;
     color: white;
+    
 }
 
 /*Titulo de la pagina*/
@@ -45,7 +49,7 @@ body {
   background-size: cover; /* Ajusta la imagen para cubrir todo */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que se repita */
-  height: 50vh; /* Altura total de la ventana */
+  height: 59vh; /* Altura total de la ventana */
   text-align: center;
   color: white;
   display: flex;
@@ -163,7 +167,7 @@ h1, p{
   background-color: #212121; 
   border-radius: 100px;
   transition: 0.4s;
-  font-size: 20px;
+
   
 }
 
